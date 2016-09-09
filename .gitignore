@@ -1,0 +1,6 @@
+*.nix
+*.xlsx
+*~
+sample*/
+trigger_data/
+*.DS_Store
