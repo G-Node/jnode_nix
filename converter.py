@@ -132,9 +132,10 @@ def load_data(filename):
     name, ext = os.path.splitext(full_name)
     file_parts = name.split("_")
     pattern = "_".join(file_parts[:-1])
-    files = glob.glob(os.path.join(folder, pattern + "*"))
+    files = glob.glob(os.path.join(folder, pattern + "*.mat"))
     combined_data = None
-    for f in files:
+    for f in sorted(files):
+        print("Loading file %s" % f, file=sys.stderr)
         data = scio.matlab.loadmat(f)
         y = np.squeeze(data["y"])
         if combined_data is None:
