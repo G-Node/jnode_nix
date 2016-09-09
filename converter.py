@@ -1,4 +1,4 @@
-#!/usr/bin/env python I changed
+#!/usr/bin/env python
 from __future__ import print_function
 import nixio as nix
 import numpy as np
